@@ -1,8 +1,6 @@
-# Svelte YouTube Embed (Fixed Fork)
+# Svelte YouTube Embed
 
 Lazy-load YouTube videos while keeping full control over playback from your Svelte components.
-
-> **Note**: This is a fixed fork of [svelte-youtube-embed](https://github.com/sharu725/youtube-embed) that resolves Svelte 5 `$derived` syntax issues causing videos not to display correctly.
 
 ## Highlights
 
@@ -12,28 +10,12 @@ Lazy-load YouTube videos while keeping full control over playback from your Svel
 - Provide custom thumbnails or play buttons with slots/snippets.
 - Inherits your project's typography by default while still offering CSS variables for overrides.
 - Uses the YouTube Iframe API behind the scenes—no zoom-in transition, no surprises.
-- ✨ **Fixed**: Correct Svelte 5 `$derived` syntax for proper video rendering
 
 ## Installation
 
-Install directly from this GitHub repository:
-
 ```bash
-npm install TommasoPrinetti/youtube-embed
-# or
-npm install github:TommasoPrinetti/youtube-embed
-# or with pnpm
-pnpm add TommasoPrinetti/youtube-embed
-```
-
-Or add to your `package.json`:
-
-```json
-{
-  "dependencies": {
-    "svelte-youtube-embed": "github:TommasoPrinetti/youtube-embed"
-  }
-}
+npm i -D svelte-youtube-embed
+# or pnpm add -D svelte-youtube-embed
 ```
 
 ## Basic Usage
@@ -143,21 +125,6 @@ Fonts inherit from your global styles. A few CSS variables let you tweak colours
 
 Because the player itself is created by the YouTube API, use regular CSS to style the surrounding wrapper, or pass `playerVars` to hide controls.
 
-## What's Fixed in This Fork?
-
-This fork resolves a critical bug in the original package where the Svelte 5 `$derived` rune was incorrectly implemented. The issue caused:
-- Videos not displaying on pages
-- Thumbnail URLs not generating correctly
-- Aspect ratios not calculating properly
-- Player variables not being passed correctly
-
-**The Fix**: Changed `$derived(() => expression)` to `$derived(expression)` throughout all components.
-
-## Contributing
-
-This is a fork. For general features, please contribute to the [original repository](https://github.com/sharu725/youtube-embed). For issues specific to this fork, please open an issue on this repository.
-
 ## License
 
-MIT © Svelte Themes (Original)  
-Fork maintained by Tommaso Prinetti
+MIT © Svelte Themes
