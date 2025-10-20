@@ -1,21 +1,18 @@
 <script>
-  let { play_button, play = $bindable() } = $props();
+  let {
+    play_button,
+    play = $bindable(),
+    label = "Play YouTube video",
+  } = $props();
 </script>
 
 {#if play_button}
-  <button
-    class="custom__play__btn"
-    onclick={() => (play = true)}
-    aria-label="Play YouTube video"
-  >
+  <button class="custom__play__btn" onclick={() => (play = true)} aria-label={label}>
     {@render play_button()}
   </button>
 {:else}
-  <button
-    class="play__btn"
-    onclick={() => (play = true)}
-    aria-label="Play YouTube video"
-    ><svg
+  <button class="play__btn" onclick={() => (play = true)} aria-label={label}>
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       class="iconify iconify--mdi"
@@ -33,20 +30,10 @@
   .play__btn,
   .custom__play__btn {
     all: unset;
+    font-family: inherit;
   }
-  .play__btn {
-    display: grid;
-    place-items: center;
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    cursor: pointer;
-  }
+
+  .play__btn,
   .custom__play__btn {
     display: grid;
     place-items: center;
@@ -57,5 +44,10 @@
     left: 0;
     margin: auto;
     cursor: pointer;
+  }
+
+  .play__btn {
+    height: 80px;
+    width: 80px;
   }
 </style>

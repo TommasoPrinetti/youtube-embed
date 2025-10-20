@@ -3,16 +3,13 @@
   import Prism from "./Prism.svelte";
 </script>
 
-<h1>Youtube Video Embed</h1>
+<h1>YouTube Video Embed</h1>
 
 <p>
-  The package provides faster page load while embedding youtube videos since it
-  loads the youtube thumbnail istead of the entire iframe.
+  Render a lightweight thumbnail first and only boot the YouTube player when
+  you decide to play the video.
 </p>
-<p>
-  The package will load the iframe and play the video only upong clicking
-  the play button.
-</p>
+<p>Control playback with Svelte bindings and start at any timestamp.</p>
 
 <h2>Installation</h2>
 <Prism code={`npm i -D svelte-youtube-embed`} />

@@ -5,7 +5,7 @@
 
 <h2>With custom play button</h2>
 
-<Youtube id="EBtsu6naB8g" animations={false}>
+<Youtube id="EBtsu6naB8g">
   {#snippet play_button()}
     <button>play</button>
   {/snippet}
