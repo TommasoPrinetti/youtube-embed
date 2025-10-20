@@ -1,2 +1,1 @@
-import Youtube from "./Youtube.svelte";
-export default Youtube;
+export { default } from "./Youtube.svelte";
